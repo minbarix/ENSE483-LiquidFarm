@@ -114,8 +114,8 @@ $sqltemp = "SELECT val FROM humidity WHERE num = '$temphold'";
 $result = $conn->query($sqltemp);
 if($result){
 $row = $result->fetch_assoc();
-global $currento2;
-$currento2 = $row['val'];}
+global $currenthumidity;
+$currenthumidity = $row['val'];}
 
 $sql = "SELECT MAX(num) AS highnum FROM humidity";
 $result = $conn->query($sql);

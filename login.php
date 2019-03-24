@@ -36,6 +36,12 @@ if (isset($_POST["Login"])) {
                 $_SESSION['minbacc'] = 2;
                 $_SESSION['maxbacc'] = 6;
 
+                $_SESSION['minalc'] = 8;
+                $_SESSION['maxalc'] = 12;
+                $_SESSION['minuv'] = 0;
+                $_SESSION['maxuv'] = 7;
+                $_SESSION['minhumidity'] = 40;
+                $_SESSION['maxhumidity'] = 65;
 
                 header('location: oiltest.php');
                 exit();
