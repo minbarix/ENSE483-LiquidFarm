@@ -1,0 +1,178 @@
+body {
+    background:  lightcyan;
+    color: rgba(254, 255, 255, 0.9);
+    overflow: auto;
+    margin: 0;
+    background-image: url("mountains.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 180%;
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+li:not(.logo):not(.logo_img) {
+    float: left;
+}
+
+li a {
+    display: inline-block;
+    color: #FEFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active):not(.logo) {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    position: fixed;
+    right: 45px;
+}
+
+.logo_img {
+    margin-top: 7px;
+    position: fixed;
+    right: 15px;
+}
+
+footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+    color: #FEFFFF;
+    text-align: center;
+    position: fixed; 
+
+}
+
+table {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table#login {
+    text-align: left;
+    margin-left: left;
+    margin-right: left;
+}
+table#retrieve {
+    text-align: left;
+    margin-left: left;
+    margin-right: left;
+}
+table#news {
+    text-align: left;
+    margin-left: left;
+    margin-right: left;
+}
+
+table#rar1 {
+    float: left;
+    text-align: left;
+    margin-left: left;
+    margin-right: left;
+    padding-left: 15%;
+    width:40%;
+}
+span#rar2 {
+    float: right;
+    text-align: left;
+    margin-left: left;
+    margin-right: left;
+    padding-right: 15%;
+    width:40%;
+    word-wrap: break-word;
+}
+
+span#newsfeed p {
+    text-align: left;
+    padding-left: 12%;
+    word-wrap: break-word;
+    width: 70%
+}
+
+span#newsfeed p#nfreply {
+    padding-left: 17%;
+}
+
+.newTitle {
+    text-align: center;
+}
+
+.img_Button {
+    width: 78px;
+    overflow: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+input, textarea {
+    background-color: rgba(0, 0, 0, 0.30);
+    color: white;
+    border: .5px solid rgba(255, 255, 255, 0.212);
+}
+
+input:focus, textarea:focus, input:hover, textarea:hover {
+    background-color: rgba(0, 0, 0, 0.60);
+    color: white;
+    border: .2px solid rgba(255, 255, 255, 0.034);
+    
+}
+
+input[type=submit] {
+    padding: 6px 12px;
+    border: .5px solid rgba(255, 255, 255, 0.212);
+}
+
+input[type=file] {
+    display: none;
+}
+
+.upload_overlay {
+    background-color: rgba(0, 0, 0, 0.30);
+    border: .5px solid rgba(255, 255, 255, 0.212);
+    padding: 6px 4px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+.upload_overlay:hover {
+    background-color: rgba(0, 0, 0, 0.60);
+    color: white;
+    border: .2px solid rgba(255, 255, 255, 0.034);
+    
+}
+
+.err_msg {
+    color:rgb(252, 111, 111); 	
+    
+}
+
+
