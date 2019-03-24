@@ -508,7 +508,7 @@ function drawChart() {
 
 
 
-
+<div id="inputform">Please define all Parameters:
     <form action="oilupdate.php" method="post">
 Minimum Temperature: <input type="text" name="newmintemp"><br>
 Maximum Temperature : <input type="text" name="newmaxtemp"><br>
@@ -518,7 +518,7 @@ Minimum pH: <input type="text" name="newminph"><br>
 Maximum pH : <input type="text" name="newmaxph"><br>
 <input type="submit" value="Update bounds">
 </form>
-
+</div>
 
 
 

@@ -126,8 +126,8 @@ $sqltemp = "SELECT val FROM humidity WHERE num = '$temphold'";
 $result = $conn->query($sqltemp);
 if($result){
 $row = $result->fetch_assoc();
-global $o2m1;
-$o2m1 = $row['val'];}
+global $humiditym1;
+$humiditym1 = $row['val'];}
 
 $sql = "SELECT MAX(num) AS highnum FROM humidity";
 $result = $conn->query($sql);
@@ -138,8 +138,8 @@ $sqltemp = "SELECT val FROM humidity WHERE num = '$temphold'";
 $result = $conn->query($sqltemp);
 if($result){
 $row = $result->fetch_assoc();
-global $o2m2;
-$o2m2 = $row['val'];}
+global $humiditym2;
+$humiditym2 = $row['val'];}
 
 $sql = "SELECT MAX(num) AS highnum FROM humidity";
 $result = $conn->query($sql);
@@ -150,34 +150,34 @@ $sqltemp = "SELECT val FROM humidity WHERE num = '$temphold'";
 $result = $conn->query($sqltemp);
 if($result){
 $row = $result->fetch_assoc();
-global $o2m3;
-$o2m3 = $row['val'];}
+global $humiditym3;
+$humiditym3 = $row['val'];}
 
 
 
-$tempstatus = "Normal";
-if($currenttemp < $_SESSION['mintemp']){
-    $tempstatus = "Warning! Minimum Temperature Threshold Exceeded!";
+$alcstatus = "Normal";
+if($currentalc < $_SESSION['minalc']){
+    $alcstatus = "Warning! Minimum Alcohol Threshold Exceeded!";
 }
-else if ($currenttemp > $_SESSION['maxtemp']){
-    $tempstatus = "Warning! Maximum Temperature Threshold Exceeded!";
-}
-
-
-$o2status = "Normal";
-if($currento2 < $_SESSION['mino2']){
-    $o2status = "Warning! Minimum o2 Threshold Exceeded!";
-}
-else if($currento2 > $_SESSION['maxo2']){
-    $o2status = "Warning! Maxmimum o2 Threshold Exceeded!";
+else if ($currenttemp > $_SESSION['maxalc']){
+    $alcstatus = "Warning! Maximum Alcohol Threshold Exceeded!";
 }
 
-$phstatus = "Normal";
-if($currentph < $_SESSION['minph']){
-    $phstatus = "Warning! Minimum pH Threshold Exceeded";
+
+$uvstatus = "Normal";
+if($currentuv < $_SESSION['minuv']){
+    $uvstatus = "Warning! Minimum uv Threshold Exceeded!";
 }
-else if($currentph > $_SESSION['maxph']){
-    $phstatus = "Warning! Maxmimum pH Threshold Exceeded";
+else if($currentuv > $_SESSION['maxuv']){
+    $uvstatus = "Warning! Maxmimum uv Threshold Exceeded!";
+}
+
+$humiditystatus = "Normal";
+if($currenthumidity < $_SESSION['minhumidity']){
+    $phstatus = "Warning! Minimum humidity Threshold Exceeded";
+}
+else if($currenthumidity > $_SESSION['maxhumidity']){
+    $humiditystatus = "Warning! Maxmimum humidity Threshold Exceeded";
 }
 
 
@@ -211,17 +211,17 @@ $conn->close();
 <body>
     <nav>
         <ul>
-            <li><a class ="active" href="oiltest.php">Oil Hub</a></li>
+            <li><a class ="active" href="oiltest.php">Winery Hub</a></li>
             <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="admin_login.php">Wine Hub</a></li>
-            <li><a href="admin_login.php">Milk Hub</a></li>
+            <li><a href="oiltest.php">Oil Hub</a></li>
+            <li><a href="milk.php">Dairy Hub</a></li>
             <li><a class = "logo"><b>MXFarms</b></a></li>
             <li> <img class = "logo_img" src="Send_03.png" alt="d" style = "display:inline" width = "30" height = "30"/></li>
         </ul>
     </nav>
 
     <header>
-        <h1>Oil Hub</h1>
+        <h1>Winery Hub</h1>
     </header>
 
     <section>
@@ -230,24 +230,24 @@ $conn->close();
                 <table id="login">
                     <tr>
                         <td>
-                            <?php echo "Current soil pH Levels: " . $currentph; ?>
+                            <?php echo "Current Alcohol Storage Level: " . $currentalc; ?>
                         </td>
                         <td>
-                            <?php echo "Current o2 Levels: " . $currento2; ?>
+                            <?php echo "Current UV Radition: " . $currentuv; ?>
                         </td>
                         <td>
-                            <?php echo "Current Temperature: " . $currenttemp; ?>
+                            <?php echo "Current Humidity: " . $currenthumidity; ?>
                         </td>
                     </tr><tr><td></td></tr>
                     <tr>
                         <td>
-                           pH Status:  <! historical graph><?php echo $phstatus; ?>
+                           Alcohlol Content Status:  <! historical graph><?php echo $alcstatus; ?>
                         </td>
                         <td>
-                        o2 Status:  <?php echo $o2status; ?>
+                        UV Status:  <?php echo $uvstatus; ?>
                         </td>
                         <td>
-                            Temperature Status: <?php echo $tempstatus; ?>
+                            Humidity Status: <?php echo $humiditystatus; ?>
                         </td>
                     </tr>
                     <tr>
@@ -263,16 +263,16 @@ google.charts.setOnLoadCallback(drawChart);
 // Draw the chart and set the chart values
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-  ['Time', 'pH level'],
-  ['Current pH level', <?php echo $currentph; ?>],
-  ['pH - 1m', <?php echo $lastph; ?>],
-  ['pH - 2m', <?php echo $phm2; ?>],
-  ['pH - 3m', <?php echo $phm3; ?>],
+  ['Time', 'Alc level'],
+  ['Current Alc level', <?php echo $currentalc; ?>],
+  ['Alc - 1m', <?php echo $lastalc; ?>],
+  ['Alc - 2m', <?php echo $alcm2; ?>],
+  ['Alc - 3m', <?php echo $alcm3; ?>],
 
 ]);
 
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'pH Level', 'width':400, 'height':350, 'backgroundColor' : 'transparent',
+  var options = {'title':'Alcohol Level', 'width':400, 'height':350, 'backgroundColor' : 'transparent',
   
   titleTextStyle: {
       color: 'white',
@@ -332,16 +332,16 @@ google.charts.setOnLoadCallback(drawChart);
 // Draw the chart and set the chart values
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-  ['Time', 'o2 level'],
-  ['Current o2 level', <?php echo $currento2; ?>],
-  ['pH - 1m', <?php echo $o2m1; ?>],
-  ['pH - 2m', <?php echo $o2m2; ?>],
-  ['pH - 3m', <?php echo $o2m3; ?>],
+  ['Time', 'UV level'],
+  ['Current UV level', <?php echo $currentuv; ?>],
+  ['UV - 1m', <?php echo $uvm1; ?>],
+  ['UV - 2m', <?php echo $uvm2; ?>],
+  ['UV - 3m', <?php echo $uvm3; ?>],
 
 ]);
 
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'o2 Level', 'width':400, 'height':350, 'backgroundColor' : 'transparent',
+  var options = {'title':'UV Level', 'width':400, 'height':350, 'backgroundColor' : 'transparent',
   
   titleTextStyle: {
       color: 'white',
@@ -401,16 +401,16 @@ google.charts.setOnLoadCallback(drawChart);
 // Draw the chart and set the chart values
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-  ['Time', 'Temperature'],
-  ['Current', <?php echo $currenttemp; ?>],
-  ['Temp - 1m', <?php echo $tempm1; ?>],
-  ['Temp - 2m', <?php echo $tempm2; ?>],
-  ['Temp - 3m', <?php echo $tempm3; ?>],
+  ['Time', 'Humidity'],
+  ['Current Humidity', <?php echo $currenthumidity; ?>],
+  ['% - 1m', <?php echo $humiditym1; ?>],
+  ['% - 2m', <?php echo $humiditym2; ?>],
+  ['% - 3m', <?php echo $humiditym3; ?>],
 
 ]);
 
   // Optional; add a title and set the width and height of the chart
-  var options = {'title':'Ambient Temperature', 'width':400, 'height':350, 'backgroundColor' : 'transparent',
+  var options = {'title':'Ambient Humidity', 'width':400, 'height':350, 'backgroundColor' : 'transparent',
   
     titleTextStyle: {
         color: 'white',
@@ -508,17 +508,17 @@ function drawChart() {
 
 
 
-
+<div id="inputform">Please Define all Parameters:
     <form action="oilupdate.php" method="post">
-Minimum Temperature: <input type="text" name="newmintemp"><br>
-Maximum Temperature : <input type="text" name="newmaxtemp"><br>
-Minimum o2: <input type="text" name="newmino2"><br>
-Maximum o2 : <input type="text" name="newmaxo2"><br>
-Minimum pH: <input type="text" name="newminph"><br>
-Maximum pH : <input type="text" name="newmaxph"><br>
+Minimum Temperature: <input type="text" name="newminalc"><br>
+Maximum Temperature : <input type="text" name="newmaxalc"><br>
+Minimum o2: <input type="text" name="newminuv"><br>
+Maximum o2 : <input type="text" name="newmaxuv"><br>
+Minimum pH: <input type="text" name="newminhumidity"><br>
+Maximum pH : <input type="text" name="newmaxhumidity"><br>
 <input type="submit" value="Update bounds">
 </form>
-
+</div>
 
 
 
