@@ -157,27 +157,27 @@ $baccm3 = $row['val'];}
 
 $tempstatus = "Normal";
 if($currenttemp < $_SESSION['mintempmilk']){
-    $tempstatus = "Warning! Minimum Temperature Threshold Exceeded!";
+    $tempstatus = "Warning! Minimum Exceeded!";
 }
 else if ($currenttemp > $_SESSION['maxtempmilk']){
-    $tempstatus = "Warning! Maximum Temperature Threshold Exceeded!";
+    $tempstatus = "Warning! Maximum Exceeded!";
 }
 
 
 $mfstatus = "Normal";
 if($currentmf < $_SESSION['minmf']){
-    $mfstatus = "Warning! Minimum mf Threshold Exceeded!";
+    $mfstatus = "Warning! Minimum Exceeded!";
 }
 else if($currentmf > $_SESSION['maxmf']){
-    $mfstatus = "Warning! Maxmimum mf Threshold Exceeded!";
+    $mfstatus = "Warning! Maximum Exceeded!";
 }
 
 $baccstatus = "Normal";
 if($currentbacc < $_SESSION['minbacc']){
-    $phstatus = "Warning! Minimum Bacteria Threshold Exceeded";
+    $phstatus = "Warning! Minimum Exceeded";
 }
 else if($currentbacc > $_SESSION['maxbacc']){
-    $baccstatus = "Warning! Maxmimum Bacteria Threshold Exceeded";
+    $baccstatus = "Warning! Maximum Exceeded";
 }
 
 
@@ -208,7 +208,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<body>
+<body style="background-image: url('olive.jpg'); background-size: cover;">
     <nav>
         <ul>
             <li><a class ="active" href="milk.php">Oil Hub</a></li>
@@ -241,13 +241,14 @@ $conn->close();
                     </tr><tr><td></td></tr>
                     <tr>
                         <td>
-                           Milk Fat Status:  <! historical graph><?php echo $mfstatus; ?>
+                           Milk Fat Status: <br>
+                           <?php echo $mfstatus; ?>
                         </td>
                         <td>
-                        Bacteria Content Status:  <?php echo $baccstatus; ?>
+                        Bacteria Content Status: <br> <?php echo $baccstatus; ?>
                         </td>
                         <td>
-                            Temperature Status: <?php echo $tempstatus; ?>
+                            Temperature Status: <br> <?php echo $tempstatus; ?>
                         </td>
                     </tr>
                     <tr>
@@ -508,7 +509,7 @@ function drawChart() {
 
 
 
-
+    <div id="inputform">Please input all Parameters:
     <form action="milkupdate.php" method="post">
 Minimum Temperature: <input type="text" name="newmintempmilk"><br>
 Maximum Temperature : <input type="text" name="newmaxtempmilk"><br>
@@ -518,7 +519,7 @@ Minimum Bacteria: <input type="text" name="newminbacc"><br>
 Maximum Bacteria : <input type="text" name="newmaxbacc"><br>
 <input type="submit" value="Update bounds">
 </form>
-
+</div>
 
 
 

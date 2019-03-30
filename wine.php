@@ -157,27 +157,27 @@ $humiditym3 = $row['val'];}
 
 $alcstatus = "Normal";
 if($currentalc < $_SESSION['minalc']){
-    $alcstatus = "Warning! Minimum Alcohol Threshold Exceeded!";
+    $alcstatus = "Warning! Minimum Exceeded!";
 }
-else if ($currenttemp > $_SESSION['maxalc']){
-    $alcstatus = "Warning! Maximum Alcohol Threshold Exceeded!";
+else if ($currentalc > $_SESSION['maxalc']){
+    $alcstatus = "Warning! Maximum Exceeded!";
 }
 
 
 $uvstatus = "Normal";
 if($currentuv < $_SESSION['minuv']){
-    $uvstatus = "Warning! Minimum uv Threshold Exceeded!";
+    $uvstatus = "Warning! Minimum Exceeded!";
 }
 else if($currentuv > $_SESSION['maxuv']){
-    $uvstatus = "Warning! Maxmimum uv Threshold Exceeded!";
+    $uvstatus = "Warning! Maximum Exceeded!";
 }
 
 $humiditystatus = "Normal";
 if($currenthumidity < $_SESSION['minhumidity']){
-    $phstatus = "Warning! Minimum humidity Threshold Exceeded";
+    $phstatus = "Warning! Minimum Exceeded";
 }
 else if($currenthumidity > $_SESSION['maxhumidity']){
-    $humiditystatus = "Warning! Maxmimum humidity Threshold Exceeded";
+    $humiditystatus = "Warning! Maximum Exceeded";
 }
 
 
@@ -208,7 +208,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<body>
+<body style="background-image: url('wine.jpg'); background-size: cover;">
     <nav>
         <ul>
             <li><a class ="active" href="oiltest.php">Winery Hub</a></li>
@@ -241,13 +241,13 @@ $conn->close();
                     </tr><tr><td></td></tr>
                     <tr>
                         <td>
-                           Alcohlol Content Status:  <! historical graph><?php echo $alcstatus; ?>
+                           Alcohlol Content Status:  <br><?php echo $alcstatus; ?>
                         </td>
                         <td>
-                        UV Status:  <?php echo $uvstatus; ?>
+                        UV Status:<br>  <?php echo $uvstatus; ?>
                         </td>
                         <td>
-                            Humidity Status: <?php echo $humiditystatus; ?>
+                            Humidity Status:<br> <?php echo $humiditystatus; ?>
                         </td>
                     </tr>
                     <tr>

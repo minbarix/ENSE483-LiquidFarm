@@ -157,27 +157,27 @@ $o2m3 = $row['o2value'];}
 
 $tempstatus = "Normal";
 if($currenttemp < $_SESSION['mintemp']){
-    $tempstatus = "Warning! Minimum Temperature Threshold Exceeded!";
+    $tempstatus = "Warning! Minimum Exceeded!";
 }
 else if ($currenttemp > $_SESSION['maxtemp']){
-    $tempstatus = "Warning! Maximum Temperature Threshold Exceeded!";
+    $tempstatus = "Warning! Maximum Exceeded!";
 }
 
 
 $o2status = "Normal";
 if($currento2 < $_SESSION['mino2']){
-    $o2status = "Warning! Minimum o2 Threshold Exceeded!";
+    $o2status = "Warning! Minimum Exceeded!";
 }
 else if($currento2 > $_SESSION['maxo2']){
-    $o2status = "Warning! Maxmimum o2 Threshold Exceeded!";
+    $o2status = "Warning! Maximum Exceeded!";
 }
 
 $phstatus = "Normal";
 if($currentph < $_SESSION['minph']){
-    $phstatus = "Warning! Minimum pH Threshold Exceeded";
+    $phstatus = "Warning! Minimum Exceeded";
 }
 else if($currentph > $_SESSION['maxph']){
-    $phstatus = "Warning! Maxmimum pH Threshold Exceeded";
+    $phstatus = "Warning! Maximum Exceeded";
 }
 
 
@@ -241,13 +241,13 @@ $conn->close();
                     </tr><tr><td></td></tr>
                     <tr>
                         <td>
-                           pH Status:  <! historical graph><?php echo $phstatus; ?>
+                           pH Status: <br><?php echo $phstatus; ?>
                         </td>
                         <td>
-                        o2 Status:  <?php echo $o2status; ?>
+                        o2 Status: <br> <?php echo $o2status; ?>
                         </td>
                         <td>
-                            Temperature Status: <?php echo $tempstatus; ?>
+                            Temperature Status: <br><?php echo $tempstatus; ?>
                         </td>
                     </tr>
                     <tr>
