@@ -487,9 +487,9 @@ function drawChart() {
                             Battery Level 97% Signal Strength: 97db
                         </td>
                     <tr>
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.03891023993494%2C38.89662966095715%2C-77.03591153025629%2C38.89812221482436&amp;layer=mapnik&amp;marker=38.89737594181201%2C-77.0374108850956" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=38.89738&amp;mlon=-77.03741#map=19/38.89738/-77.03741&amp;layers=N">View Larger Map</a></small></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.03762143850328%2C38.89392419664227%2C-77.03462272882463%2C38.895416807369905&amp;layer=mapnik&amp;marker=38.89467050592726%2C-77.03612208366394" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=38.89467&amp;mlon=-77.03612#map=19/38.89467/-77.03612&amp;layers=N">View Larger Map</a></small></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-77.05236822366716%2C38.88929377244844%2C-77.04637080430986%2C38.89227915715388&amp;layer=mapnik&amp;marker=38.8907864804854%2C-77.0493695139885" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=38.89079&amp;mlon=-77.04937#map=18/38.89079/-77.04937&amp;layers=N">View Larger Map</a></small></td> 
                     </tr>
                 </table>
             </form>   

@@ -215,7 +215,7 @@ $conn->close();
             <li><a href="signup.php">Sign Up</a></li>
             <li><a href="oiltest.php">Oil Hub</a></li>
             <li><a href="milk.php">Dairy Hub</a></li>
-            <li><a class = "logo"><b>MXFarms</b></a></li>
+            <li><a class = "logo"><b>2XLFarms</b></a></li>
             <li> <img class = "logo_img" src="Send_03.png" alt="d" style = "display:inline" width = "30" height = "30"/></li>
         </ul>
     </nav>
@@ -241,7 +241,7 @@ $conn->close();
                     </tr><tr><td></td></tr>
                     <tr>
                         <td>
-                           Alcohlol Content Status:  <br><?php echo $alcstatus; ?>
+                           Alcohol Content Status:  <br><?php echo $alcstatus; ?>
                         </td>
                         <td>
                         UV Status:<br>  <?php echo $uvstatus; ?>
@@ -265,7 +265,7 @@ function drawChart() {
   var data = google.visualization.arrayToDataTable([
   ['Time', 'Alc level'],
   ['Current Alc level', <?php echo $currentalc; ?>],
-  ['Alc - 1m', <?php echo $lastalc; ?>],
+  ['Alc - 1m', <?php echo $alcm1; ?>],
   ['Alc - 2m', <?php echo $alcm2; ?>],
   ['Alc - 3m', <?php echo $alcm3; ?>],
 
@@ -334,7 +334,7 @@ function drawChart() {
   var data = google.visualization.arrayToDataTable([
   ['Time', 'UV level'],
   ['Current UV level', <?php echo $currentuv; ?>],
-  ['UV - 1m', <?php echo $uvm1; ?>],
+  ['UV - 1m', <?php echo $lastuv; ?>],
   ['UV - 2m', <?php echo $uvm2; ?>],
   ['UV - 3m', <?php echo $uvm3; ?>],
 
@@ -486,9 +486,9 @@ function drawChart() {
                             Battery Level 97% Signal Strength: 97db
                         </td>
                     <tr>
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-104.59164619445802%2C50.415540922900625%2C-104.58752632141115%2C50.417984935405265&amp;layer=mapnik&amp;marker=50.416762944914694%2C-104.58958625793457" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=50.41676&amp;mlon=-104.58959#map=18/50.41676/-104.58959&amp;layers=N">View Larger Map</a></small></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-104.59399849176408%2C50.41530335132473%2C-104.58987861871721%2C50.417747376086055&amp;layer=mapnik&amp;marker=50.41652537946719%2C-104.59193855524063" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=50.41653&amp;mlon=-104.59194#map=18/50.41653/-104.59194&amp;layers=N">View Larger Map</a></small></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-104.58874672651294%2C50.4175935600641%2C-104.58462685346605%2C50.42003746666807&amp;layer=mapnik&amp;marker=50.41881552912763%2C-104.58668678998947" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=50.41882&amp;mlon=-104.58669#map=18/50.41882/-104.58669&amp;layers=N">View Larger Map</a></small></td> 
                     </tr>
                 </table>
             </form>   

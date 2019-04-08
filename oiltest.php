@@ -215,7 +215,7 @@ $conn->close();
             <li><a href="signup.php">Sign Up</a></li>
             <li><a href="admin_login.php">Wine Hub</a></li>
             <li><a href="admin_login.php">Milk Hub</a></li>
-            <li><a class = "logo"><b>MXFarms</b></a></li>
+            <li><a class = "logo"><b>rmfFarms</b></a></li>
             <li> <img class = "logo_img" src="Send_03.png" alt="d" style = "display:inline" width = "30" height = "30"/></li>
         </ul>
     </nav>
@@ -486,9 +486,9 @@ function drawChart() {
                             Battery Level 97% Signal Strength: 97db
                         </td>
                     <tr>
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
-                        <td><img src="https://image.shutterstock.com/z/stock-vector-world-globe-d-illuminated-with-coordinates-modern-sci-fi-futuristic-vector-illustration-concept-626909456.jpg" width="349" height="219"></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-104.78236198425294%2C50.64265723027545%2C-104.68640327453615%2C50.68155853997977&amp;layer=mapnik&amp;marker=50.662111913376506%2C-104.73438262939453" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=50.6621&amp;mlon=-104.7344#map=14/50.6621/-104.7344&amp;layers=N">View Larger Map</a></small></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-104.86724853515626%2C50.70317155518571%2C-104.77128982543947%2C50.74202273369285&amp;layer=mapnik&amp;marker=50.722601170975885%2C-104.81926918029785" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=50.7226&amp;mlon=-104.8193#map=14/50.7226/-104.8193&amp;layers=N">View Larger Map</a></small></td> 
+                        <td><iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-104.93372440338136%2C50.714123783569946%2C-104.83776569366456%2C50.75296588441902&amp;layer=mapnik&amp;marker=50.733548860219265%2C-104.88574504852295" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?mlat=50.7335&amp;mlon=-104.8857#map=14/50.7335/-104.8857&amp;layers=N">View Larger Map</a></small></td> 
                     </tr>
                 </table>
             </form>   
